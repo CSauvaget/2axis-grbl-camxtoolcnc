@@ -1,8 +1,22 @@
 ![GitHub Logo](https://github.com/gnea/gnea-Media/blob/master/Grbl%20Logo/Grbl%20Logo%20250px.png?raw=true)
 
 ***
-_Click the `Release` tab to download pre-compiled `.hex` files or just [click here](https://github.com/gnea/grbl/releases)_
+_This is a moddified grbl repository. For original version [click here](https://github.com/gnea/grbl)_
 ***
+
+Modified version of this repository consist on enabling dual axis mode (new in 1.1h) on Y axis and remap the dual axis pin on original Z axis pin.
+With this version you can transfrom a 3 axis Camxtool 3.4/3.5 board (or any board without XYY/XYZ mode jumper) to a 2 axis board with 2 steppers on one axis.
+I made this version to reuse my first 3018 CNC control board (with fried spindle mosfet) on a laser engraver.
+
+In order to compile and upload this version [click here](https://github.com/gnea/grbl/wiki/Compiling-Grbl).
+
+NOTE : Z axis isn't totaly disabled so be careful your gcode doesn't contain any Z move.
+
+NOTE 2 : To invert the direction of one Y stepper simply use $3 variable and ajust for Y and/or Z axis.
+
+
+***
+
 Grbl is a no-compromise, high performance, low cost alternative to parallel-port-based motion control for CNC milling. This version of Grbl runs on an Arduino with a 328p processor (Uno, Duemilanove, Nano, Micro, etc).
 
 The controller is written in highly optimized C utilizing every clever feature of the AVR-chips to achieve precise timing and asynchronous operation. It is able to maintain up to 30kHz of stable, jitter free control pulses.
